@@ -11,6 +11,23 @@ html {
 }
 
 body {
+  background: $dark-blue;
   font-family: $main-font;
   min-height: 100vh;
+  padding: 120px 16px;
+}
+
+.advice-container {
+  background: $dark-grayish-blue;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+  border-radius: 10px;
+  padding-inline: 25px;
+  text-align: center;
+
+  &__header {
+    color: $neon-green;
+    font-size: 11px;
+    letter-spacing: 3.4px;
+    line-height: 15px;
+  }
 }

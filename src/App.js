@@ -4,18 +4,19 @@ import Dice from './images/icon-dice.svg';
 import MobileDivider from './images/pattern-divider-mobile.svg';
 
 function App() {
-  const [advice, setAdvice] = useState('');
+  const [advice, setAdvice] = useState();
 
   useEffect(() => {
     fetchData();
-  }, [advice]);
+  }, []);
 
   const fetchData = async () => {
     const res = await fetch('https://api.adviceslip.com/advice');
     const data = await res.json();
     setAdvice(data);
-    console.log(data);
   };
+
+  if (advice === undefined) return <h1 className='loading-msg'>Loading...</h1>;
 
   return (
     <div className='advice-container'>

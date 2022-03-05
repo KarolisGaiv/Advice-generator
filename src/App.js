@@ -20,7 +20,11 @@ function App() {
     <div className='advice-container'>
       <h1 className='advice-container__header'>Advice #{advice.slip.id}</h1>
       <p className='advice-container__content'>"{advice.slip.advice}"</p>
-      <img src={MobileDivider} alt='' />
+      <img
+        className='advice-container__divider'
+        src={MobileDivider}
+        alt='straight line divider'
+      />
     </div>
   );
 }

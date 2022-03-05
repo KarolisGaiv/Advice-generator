@@ -23,6 +23,7 @@ body {
   box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
   border-radius: 10px;
   padding-inline: 25px;
+  position: relative;
   text-align: center;
 
   &__header {
@@ -49,7 +50,11 @@ body {
   background: $neon-green;
   border: none;
   border-radius: 50%;
+  left: 50%;
   padding: 20px;
+  position: absolute;
+  top: 85%;
+  transform: translate(-50%, 0);
 }
 
 .loading-msg {

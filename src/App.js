@@ -1,5 +1,6 @@
 import './styles/main.scss';
 import { useEffect, useState } from 'react';
+import Dice from './images/icon-dice.svg';
 import MobileDivider from './images/pattern-divider-mobile.svg';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [advice]);
 
   const fetchData = async () => {
     const res = await fetch('https://api.adviceslip.com/advice');
@@ -25,6 +26,9 @@ function App() {
         src={MobileDivider}
         alt='straight line divider'
       />
+      <button className='generate-btn'>
+        <img src={Dice} alt='' />
+      </button>
     </div>
   );
 }

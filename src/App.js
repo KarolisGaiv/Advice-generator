@@ -16,6 +16,10 @@ function App() {
     setAdvice(data);
   };
 
+  function changeAdvice() {
+    fetchData();
+  }
+
   if (advice === undefined) return <h1 className='loading-msg'>Loading...</h1>;
 
   return (
@@ -27,7 +31,7 @@ function App() {
         src={MobileDivider}
         alt='straight line divider'
       />
-      <button className='generate-btn'>
+      <button className='generate-btn' onClick={changeAdvice}>
         <img src={Dice} alt='' />
       </button>
     </div>

@@ -26,12 +26,22 @@ body {
   position: relative;
   text-align: center;
 
+  @media (min-width: $breakpoint-laptop) {
+    margin-inline: auto;
+    max-width: 540px;
+    padding-inline: 48px;
+  }
+
   &__header {
     color: $neon-green;
     font-size: 11px;
     letter-spacing: 3.4px;
     line-height: 15px;
     padding-top: 40px;
+
+    @media (min-width: $breakpoint-laptop) {
+      padding-top: 48px;
+    }
   }
 
   &__content {
@@ -43,6 +53,10 @@ body {
 
   &__divider {
     margin-bottom: 65px;
+
+    @media (min-width: $breakpoint-laptop) {
+      margin-bottom: 72px;
+    }
   }
 }
 
@@ -50,11 +64,16 @@ body {
   background: $neon-green;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
   left: 50%;
   padding: 20px;
   position: absolute;
-  top: 85%;
+  top: 86%;
   transform: translate(-50%, 0);
+
+  &:hover {
+    box-shadow: 0px 0px 40px #53ffaa;
+  }
 }
 
 .loading-msg {
